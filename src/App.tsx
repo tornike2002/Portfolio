@@ -1,11 +1,10 @@
-
+import Routes from "./components/Routes/AllRoutes";
 function App() {
-
   return (
     <>
-      <div>hello</div>
+      <Routes />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
