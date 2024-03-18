@@ -18,7 +18,9 @@ export default Home;
 const HomeContainer = styled.div`
   height: 100vh;
   max-width: 100%;
-  background: url(${homeBg});
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(${homeBg});
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 `;
