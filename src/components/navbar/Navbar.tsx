@@ -19,6 +19,7 @@ export default Navbar;
 
 const Nav = styled.nav`
   margin: 0 5%;
+  padding-top: 3%;
   display: flex;
   justify-content: space-between;
   align-items: center;
