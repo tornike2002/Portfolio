@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Navbar from "../navbar/Navbar";
 import homeBg from "../../assets/Home/homeBg.jpg";
 import MainTitle from "../title/MainTitle";
+import Footer from "../footer/Footer";
 
 const Home: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const Home: React.FC = () => {
       <HomeContainer>
         <Navbar />
         <MainTitle />
+        <Footer />
       </HomeContainer>
     </Fragment>
   );
