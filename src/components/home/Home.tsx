@@ -11,7 +11,9 @@ const Home: React.FC = () => {
       <HomeContainer>
         <Navbar />
         <MainTitle />
-        <Footer />
+        <div className="footerStick-bottom">
+          <Footer />
+        </div>
       </HomeContainer>
     </Fragment>
   );
@@ -27,4 +29,9 @@ const HomeContainer = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  .footerStick-bottom{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
 `;

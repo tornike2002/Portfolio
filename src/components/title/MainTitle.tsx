@@ -39,6 +39,6 @@ const TitleWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 60%;
+  min-height: 50%;
 
 `;
