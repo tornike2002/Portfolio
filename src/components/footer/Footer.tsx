@@ -61,5 +61,6 @@ const IconsWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 25px;
+    font-size: 25px;
   }
 `;
