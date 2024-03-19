@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Navbar from "../navbar/Navbar";
 import homeBg from "../../assets/Home/homeBg.jpg";
 import MainTitle from "../title/MainTitle";
+import Footer from "../footer/Footer";
 
 const Home: React.FC = () => {
   return (
@@ -10,6 +11,9 @@ const Home: React.FC = () => {
       <HomeContainer>
         <Navbar />
         <MainTitle />
+        <div className="footerStick-bottom">
+          <Footer />
+        </div>
       </HomeContainer>
     </Fragment>
   );
@@ -25,4 +29,9 @@ const HomeContainer = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  .footerStick-bottom{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
 `;

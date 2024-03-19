@@ -26,7 +26,7 @@ const MainTitle: React.FC = () => {
 export default MainTitle;
 
 const MainTitleCenter = styled.h1`
-  color: #fff;
+  color: #4bffa5;
   font-family: "Roboto", sans-serif;
   span {
     font-size: 70px;
@@ -39,6 +39,6 @@ const TitleWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 60%;
+  min-height: 50%;
 
 `;
