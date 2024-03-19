@@ -1,13 +1,15 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
 import Navbar from "../navbar/Navbar";
-import homeBg from "../../assets/Home/homeBg.jpg"; // Import the background image
+import homeBg from "../../assets/Home/homeBg.jpg";
+import MainTitle from "../title/MainTitle";
 
 const Home: React.FC = () => {
   return (
     <Fragment>
       <HomeContainer>
         <Navbar />
+        <MainTitle />
       </HomeContainer>
     </Fragment>
   );
