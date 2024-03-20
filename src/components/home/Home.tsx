@@ -29,6 +29,7 @@ const HomeContainer = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow-y: hidden;
   .footerStick-bottom{
     width: 100%;
     position: absolute;
