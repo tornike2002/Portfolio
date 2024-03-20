@@ -40,5 +40,22 @@ const TitleWrapper = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 50%;
-
+  @media screen and (max-width: 780px) {
+      font-size: 45px;
+      text-align: center;
+    }
+  span{
+    @media screen and (max-width: 780px) {
+      font-size: 45px;
+      text-align: center;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 35px;
+      text-align: center;
+    }
+    @media screen and (max-width: 380px) {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
 `;

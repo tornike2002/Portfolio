@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   return (
     <FooterContainer>
       <div className="footerInfo-wrapper">
-        <div>
+        <div className="footerInfo-dissepiar">
           <FooterH>E: butiashvilitornike18@gmail.com</FooterH>
           <FooterH>T: +995 598-78-83-00</FooterH>
         </div>
@@ -22,13 +22,16 @@ const Footer: React.FC = () => {
       </div>
       <IconsWrapper>
         <div className="footerIcons-wrapper">
-          <a href="#" target="_blank">
+          <a href="https://www.facebook.com/Painaaaaa" target="_blank">
             <FacebookOutlined style={{ color: "#bbb" }} />
           </a>
-          <a href="#" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/tornike-butiashvili-4b3633226/"
+            target="_blank"
+          >
             <LinkedinOutlined style={{ color: "#bbb" }} />
           </a>
-          <a href="#" target="_blank">
+          <a href="https://github.com/tornike2002" target="_blank">
             <GithubOutlined style={{ color: "#bbb" }} />
           </a>
         </div>
@@ -50,6 +53,20 @@ const FooterContainer = styled.footer`
     align-items: center;
     justify-content: space-between;
     width: 50%;
+    @media screen and (max-width: 1320px){
+      width: 60%;
+    }
+    @media screen and (max-width: 1100px){
+      width: 70%;
+    }
+    @media screen and (max-width: 975px){
+      width: 80%;
+    }
+    @media screen and (max-width: 820px){
+      .footerInfo-dissepiar{
+        display: none;
+      }
+    }
   }
   .footer-about {
     color: #fff;
@@ -57,6 +74,9 @@ const FooterContainer = styled.footer`
     font-weight: 300;
     span {
       color: #4bffa5;
+    }
+    @media screen and (max-width: 340px){
+      font-size:16px;
     }
   }
 `;

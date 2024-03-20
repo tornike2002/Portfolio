@@ -33,6 +33,8 @@ const BurgerManuContainer = styled.div`
     align-items: center;
     flex-direction: column;
     gap: 0px;
+    padding: 0 5%;
+    border-radius: 5px;
     a {
       font-family: "Roboto", sans-serif;
       color: #bbb;
