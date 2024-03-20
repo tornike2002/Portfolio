@@ -72,7 +72,7 @@ const NavbarLinks = styled.div`
   gap: 40px;
   a {
     text-decoration: none !important;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: #bbb;
