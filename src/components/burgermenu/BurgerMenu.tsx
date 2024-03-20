@@ -13,10 +13,14 @@ const BurgerMenu: React.FC = () => {
 
 export default BurgerMenu;
 const BurgerManuContainer = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  background-color: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 11;
 `;
