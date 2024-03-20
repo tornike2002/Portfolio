@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { BarsOutlined } from "@ant-design/icons";
 const Navbar: React.FC = () => {
   return (
     <Nav>
@@ -11,6 +12,9 @@ const Navbar: React.FC = () => {
         <NavLink to="/about">About me</NavLink>
         <NavLink to="/projects">Projects</NavLink>
       </NavbarLinks>
+      <div className="burgerIcon">
+        <BarsOutlined />
+      </div>
     </Nav>
   );
 };
@@ -36,6 +40,15 @@ const Nav = styled.nav`
       line-height: 2.5;
     }
   }
+  .burgerIcon {
+    display: none;
+    color: #bbb;
+    cursor: pointer;
+    font-size: 25px;
+    @media screen and (max-width: 975px) {
+      display: block;
+    }
+  }
 `;
 const NavbarLinks = styled.div`
   display: flex;
@@ -54,5 +67,8 @@ const NavbarLinks = styled.div`
   }
   a:hover {
     color: #fff;
+  }
+  @media screen and (max-width: 975px) {
+    display: none;
   }
 `;
