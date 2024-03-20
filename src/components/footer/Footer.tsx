@@ -22,9 +22,15 @@ const Footer: React.FC = () => {
       </div>
       <IconsWrapper>
         <div className="footerIcons-wrapper">
-          <FacebookOutlined style={{ color: "#bbb" }} />
-          <LinkedinOutlined style={{ color: "#bbb" }} />
-          <GithubOutlined style={{ color: "#bbb" }} />
+          <a href="#" target="_blank">
+            <FacebookOutlined style={{ color: "#bbb" }} />
+          </a>
+          <a href="#" target="_blank">
+            <LinkedinOutlined style={{ color: "#bbb" }} />
+          </a>
+          <a href="#" target="_blank">
+            <GithubOutlined style={{ color: "#bbb" }} />
+          </a>
         </div>
       </IconsWrapper>
     </FooterContainer>
