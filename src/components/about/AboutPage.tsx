@@ -1,8 +1,11 @@
+import Navbar from "../navbar/Navbar"
 
 
 const AboutPage:React.FC = () => {
   return (
-    <div>AboutPage</div>
+    <div>
+        <Navbar />
+    </div>
   )
 }
 
