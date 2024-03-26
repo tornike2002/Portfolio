@@ -2,8 +2,28 @@ import Navbar from "../navbar/Navbar";
 import styled from "styled-components";
 import Lottie from "lottie-react";
 import AnimationData from "../../assets/animations/aboutAnimation.json";
-
+import { useTypewriter } from "react-simple-typewriter";
 const AboutPage: React.FC = () => {
+  const [AboutTitle] = useTypewriter({
+    words: ["I'm Tornike Butiashvili, React Developer"],
+    loop: 1,
+    typeSpeed: 20,
+
+  });
+  const [AboutParagraph] = useTypewriter({
+    words: [
+      `I've been working with React for over two years. I love building
+      websites and apps that people enjoy using. With React, I focus on
+      making things work smoothly and look great. I know how to manage
+      data, create interactive features, and make sure everything runs
+      fast. I'm always learning new stuff to stay updated with the latest
+      in web development. I believe in teamwork and clear communication to
+      get things done right. My goal is to be full stack developer,
+      currently im trying to learn nodejs/express/mongodb.`,
+    ],
+    loop: 1,
+    typeSpeed: 20,
+  });
   return (
     <AboutMainContainer>
       <Navbar />
@@ -17,16 +37,9 @@ const AboutPage: React.FC = () => {
           <Lottie animationData={AnimationData} />
         </LottieContainer>
         <div className="aboutMeStyles">
-          <h1>I'm Tornike Butiashvili, React Developer</h1>
+          <h1>{AboutTitle}</h1>
           <p>
-            I've been working with React for over two years. I love building
-            websites and apps that people enjoy using. With React, I focus on
-            making things work smoothly and look great. I know how to manage
-            data, create interactive features, and make sure everything runs
-            fast. I'm always learning new stuff to stay updated with the latest
-            in web development. I believe in teamwork and clear communication to
-            get things done right. My goal is to be full stack developer,
-            currently im trying to learn nodejs/express/mongodb.
+            {AboutParagraph}
           </p>
           <hr />
           <div className="AboutBoxContainer">
@@ -39,7 +52,7 @@ const AboutPage: React.FC = () => {
               </h2>
             </div>
             <div className="AboutMeBox">
-              <h2 style={{color: "#009e66"}}>
+              <h2 style={{ color: "#009e66" }}>
                 <span>Email:</span> butiashvilitornike18@gmail.com
               </h2>
               <h2>
@@ -122,7 +135,7 @@ const AboutMeWrapper = styled.div`
         font-weight: 400;
         font-size: 14px;
       }
-      h2{
+      h2 {
         color: #868484;
         font-size: 14px;
       }
