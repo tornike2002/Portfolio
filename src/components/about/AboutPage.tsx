@@ -157,6 +157,10 @@ const AboutMeWrapper = styled.div`
     gap: 40px;
     font-family: "Poppins", sans-serif;
     margin-top: 70px;
+    @media screen and (max-width: 800px){
+      width: 80%;
+     justify-content: center;
+    }
     h1 {
       font-size: 31px;
       font-weight: 700;
@@ -184,17 +188,30 @@ const AboutMeWrapper = styled.div`
         color: #868484;
         font-size: 14px;
       }
+      @media screen and (max-width: 1230px){
+        gap: 3px;
+      
+      }
     }
     .AboutBoxContainer {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @media screen and (max-width: 1230px) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 3px;
+      }
     }
   }
 `;
 const LottieContainer = styled.div`
   width: 383px;
   height: 440px;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 const AboutDownload = styled.div`
   display: flex;
