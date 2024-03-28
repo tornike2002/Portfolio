@@ -83,10 +83,10 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
           <AboutDownload>
-            <div>
+            <div className="AboutDownload_Button">
               <button>DOWNLOAD CV</button>
             </div>
-            <div>
+            <div className="AboutDownload_Icons">
               <LinkedinOutlined />
               <FacebookOutlined />
               <GithubOutlined />
@@ -187,4 +187,23 @@ const AboutDownload = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+  .AboutDownload_Button button{
+    padding: 10px 8px;
+    cursor: pointer;
+    font-weight: 300;
+    color: rgb(0, 158, 102);
+    font-family: "Poppins", sans-serif;
+    background: #2f2f2f;
+    border: 0;
+    border-radius: 3px;
+  }
+  .AboutDownload_Icons {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+  }
+  .AboutDownload_Icons i {
+    font-size: 18px;
+  }
 `;
