@@ -12,7 +12,7 @@ const AboutPage: React.FC = () => {
   const [AboutTitle] = useTypewriter({
     words: ["I'm Tornike Butiashvili, React Developer"],
     loop: 1,
-    typeSpeed: 20,
+    typeSpeed: 10,
   });
   const [AboutParagraph] = useTypewriter({
     words: [
@@ -26,27 +26,27 @@ const AboutPage: React.FC = () => {
       currently im trying to learn nodejs/express/mongodb.`,
     ],
     loop: 1,
-    typeSpeed: 20,
+    typeSpeed: 10,
   });
   const [AboutNumber] = useTypewriter({
     words: ["+995 598-78-83-00"],
     loop: 1,
-    typeSpeed: 20,
+    typeSpeed: 10,
   });
   const [AboutAge] = useTypewriter({
     words: ["21"],
     loop: 1,
-    typeSpeed: 20,
+    typeSpeed: 10,
   });
   const [AboutEmail] = useTypewriter({
     words: ["butiashvilitornike18@gmail.com"],
     loop: 1,
-    typeSpeed: 20,
+    typeSpeed: 10,
   });
   const [AboutFrom] = useTypewriter({
     words: ["Georgia, Rustavi"],
     loop: 1,
-    typeSpeed: 20,
+    typeSpeed: 10,
   });
   return (
     <AboutMainContainer>
@@ -87,9 +87,18 @@ const AboutPage: React.FC = () => {
               <button>DOWNLOAD CV</button>
             </div>
             <div className="AboutDownload_Icons">
-              <LinkedinOutlined />
-              <FacebookOutlined />
-              <GithubOutlined />
+              <a
+                href="https://www.linkedin.com/in/tornike-butiashvili-4b3633226/"
+                target="_blank"
+              >
+                <LinkedinOutlined />
+              </a>
+              <a href="https://www.facebook.com/Painaaaaa" target="_blank">
+                <FacebookOutlined />
+              </a>
+              <a href="https://github.com/tornike2002" target="_blank">
+                <GithubOutlined />
+              </a>
             </div>
           </AboutDownload>
         </div>
@@ -144,6 +153,7 @@ const AboutMeWrapper = styled.div`
     flex-direction: column;
     gap: 40px;
     font-family: "Poppins", sans-serif;
+    margin-top: 70px;
     h1 {
       font-size: 31px;
       font-weight: 700;
@@ -187,7 +197,7 @@ const AboutDownload = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
-  .AboutDownload_Button button{
+  .AboutDownload_Button button {
     padding: 10px 8px;
     cursor: pointer;
     font-weight: 300;
@@ -203,7 +213,8 @@ const AboutDownload = styled.div`
     align-items: center;
     cursor: pointer;
   }
-  .AboutDownload_Icons i {
+  .AboutDownload_Icons a {
     font-size: 18px;
+    color: rgb(0, 158, 102);
   }
 `;
