@@ -3,12 +3,16 @@ import styled from "styled-components";
 import Lottie from "lottie-react";
 import AnimationData from "../../assets/animations/aboutAnimation.json";
 import { useTypewriter } from "react-simple-typewriter";
+import {
+  LinkedinOutlined,
+  FacebookOutlined,
+  GithubOutlined,
+} from "@ant-design/icons";
 const AboutPage: React.FC = () => {
   const [AboutTitle] = useTypewriter({
     words: ["I'm Tornike Butiashvili, React Developer"],
     loop: 1,
     typeSpeed: 20,
-
   });
   const [AboutParagraph] = useTypewriter({
     words: [
@@ -58,9 +62,7 @@ const AboutPage: React.FC = () => {
         </LottieContainer>
         <div className="aboutMeStyles">
           <h1>{AboutTitle}</h1>
-          <p>
-            {AboutParagraph}
-          </p>
+          <p>{AboutParagraph}</p>
           <hr />
           <div className="AboutBoxContainer">
             <div className="AboutMeBox">
@@ -80,6 +82,16 @@ const AboutPage: React.FC = () => {
               </h2>
             </div>
           </div>
+          <AboutDownload>
+            <div>
+              <button>DOWNLOAD CV</button>
+            </div>
+            <div>
+              <LinkedinOutlined />
+              <FacebookOutlined />
+              <GithubOutlined />
+            </div>
+          </AboutDownload>
         </div>
       </AboutMeWrapper>
     </AboutMainContainer>
@@ -170,4 +182,9 @@ const AboutMeWrapper = styled.div`
 const LottieContainer = styled.div`
   width: 383px;
   height: 440px;
+`;
+const AboutDownload = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
 `;
