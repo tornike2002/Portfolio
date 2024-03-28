@@ -8,6 +8,7 @@ import {
   FacebookOutlined,
   GithubOutlined,
 } from "@ant-design/icons";
+import CV from "../../assets/cv/cv.pdf";
 const AboutPage: React.FC = () => {
   const [AboutTitle] = useTypewriter({
     words: ["I'm Tornike Butiashvili, React Developer"],
@@ -84,7 +85,9 @@ const AboutPage: React.FC = () => {
           </div>
           <AboutDownload>
             <div className="AboutDownload_Button">
-              <button>DOWNLOAD CV</button>
+              <a href={CV} download>
+                DOWNLOAD CV
+              </a>
             </div>
             <div className="AboutDownload_Icons">
               <a
@@ -197,7 +200,7 @@ const AboutDownload = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
-  .AboutDownload_Button button {
+  .AboutDownload_Button a {
     padding: 10px 8px;
     cursor: pointer;
     font-weight: 300;
