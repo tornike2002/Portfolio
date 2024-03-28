@@ -24,6 +24,26 @@ const AboutPage: React.FC = () => {
     loop: 1,
     typeSpeed: 20,
   });
+  const [AboutNumber] = useTypewriter({
+    words: ["+995 598-78-83-00"],
+    loop: 1,
+    typeSpeed: 20,
+  });
+  const [AboutAge] = useTypewriter({
+    words: ["21"],
+    loop: 1,
+    typeSpeed: 20,
+  });
+  const [AboutEmail] = useTypewriter({
+    words: ["butiashvilitornike18@gmail.com"],
+    loop: 1,
+    typeSpeed: 20,
+  });
+  const [AboutFrom] = useTypewriter({
+    words: ["Georgia, Rustavi"],
+    loop: 1,
+    typeSpeed: 20,
+  });
   return (
     <AboutMainContainer>
       <Navbar />
@@ -45,18 +65,18 @@ const AboutPage: React.FC = () => {
           <div className="AboutBoxContainer">
             <div className="AboutMeBox">
               <h2>
-                <span>Number:</span> +995 598-78-83-00
+                <span>Number:</span> {AboutNumber}
               </h2>
               <h2>
-                <span>age:</span> 21
+                <span>age:</span> {AboutAge}
               </h2>
             </div>
             <div className="AboutMeBox">
               <h2 style={{ color: "#009e66" }}>
-                <span>Email:</span> butiashvilitornike18@gmail.com
+                <span>Email:</span> {AboutEmail}
               </h2>
               <h2>
-                <span>From:</span> Georgia, Rustavi
+                <span>From:</span> {AboutFrom}
               </h2>
             </div>
           </div>
