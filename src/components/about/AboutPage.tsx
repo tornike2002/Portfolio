@@ -3,12 +3,17 @@ import styled from "styled-components";
 import Lottie from "lottie-react";
 import AnimationData from "../../assets/animations/aboutAnimation.json";
 import { useTypewriter } from "react-simple-typewriter";
+import {
+  LinkedinOutlined,
+  FacebookOutlined,
+  GithubOutlined,
+} from "@ant-design/icons";
+import CV from "../../assets/cv/cv.pdf";
 const AboutPage: React.FC = () => {
   const [AboutTitle] = useTypewriter({
     words: ["I'm Tornike Butiashvili, React Developer"],
     loop: 1,
-    typeSpeed: 20,
-
+    typeSpeed: 10,
   });
   const [AboutParagraph] = useTypewriter({
     words: [
@@ -22,7 +27,27 @@ const AboutPage: React.FC = () => {
       currently im trying to learn nodejs/express/mongodb.`,
     ],
     loop: 1,
-    typeSpeed: 20,
+    typeSpeed: 10,
+  });
+  const [AboutNumber] = useTypewriter({
+    words: ["+995 598-78-83-00"],
+    loop: 1,
+    typeSpeed: 10,
+  });
+  const [AboutAge] = useTypewriter({
+    words: ["21"],
+    loop: 1,
+    typeSpeed: 10,
+  });
+  const [AboutEmail] = useTypewriter({
+    words: ["butiashvilitornike18@gmail.com"],
+    loop: 1,
+    typeSpeed: 10,
+  });
+  const [AboutFrom] = useTypewriter({
+    words: ["Georgia, Rustavi"],
+    loop: 1,
+    typeSpeed: 10,
   });
   return (
     <AboutMainContainer>
@@ -38,28 +63,47 @@ const AboutPage: React.FC = () => {
         </LottieContainer>
         <div className="aboutMeStyles">
           <h1>{AboutTitle}</h1>
-          <p>
-            {AboutParagraph}
-          </p>
+          <p>{AboutParagraph}</p>
           <hr />
           <div className="AboutBoxContainer">
             <div className="AboutMeBox">
               <h2>
-                <span>Number:</span> +995 598-78-83-00
+                <span>Number:</span> {AboutNumber}
               </h2>
               <h2>
-                <span>age:</span> 21
+                <span>age:</span> {AboutAge}
               </h2>
             </div>
             <div className="AboutMeBox">
               <h2 style={{ color: "#009e66" }}>
-                <span>Email:</span> butiashvilitornike18@gmail.com
+                <span>Email:</span> {AboutEmail}
               </h2>
               <h2>
-                <span>From:</span> Georgia, Rustavi
+                <span>From:</span> {AboutFrom}
               </h2>
             </div>
           </div>
+          <AboutDownload>
+            <div className="AboutDownload_Button">
+              <a href={CV} download>
+                DOWNLOAD CV
+              </a>
+            </div>
+            <div className="AboutDownload_Icons">
+              <a
+                href="https://www.linkedin.com/in/tornike-butiashvili-4b3633226/"
+                target="_blank"
+              >
+                <LinkedinOutlined />
+              </a>
+              <a href="https://www.facebook.com/Painaaaaa" target="_blank">
+                <FacebookOutlined />
+              </a>
+              <a href="https://github.com/tornike2002" target="_blank">
+                <GithubOutlined />
+              </a>
+            </div>
+          </AboutDownload>
         </div>
       </AboutMeWrapper>
     </AboutMainContainer>
@@ -112,6 +156,11 @@ const AboutMeWrapper = styled.div`
     flex-direction: column;
     gap: 40px;
     font-family: "Poppins", sans-serif;
+    margin-top: 70px;
+    @media screen and (max-width: 800px){
+      width: 80%;
+     justify-content: center;
+    }
     h1 {
       font-size: 31px;
       font-weight: 700;
@@ -139,15 +188,53 @@ const AboutMeWrapper = styled.div`
         color: #868484;
         font-size: 14px;
       }
+      @media screen and (max-width: 1230px){
+        gap: 3px;
+      
+      }
     }
     .AboutBoxContainer {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @media screen and (max-width: 1230px) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 3px;
+      }
     }
   }
 `;
 const LottieContainer = styled.div`
   width: 383px;
   height: 440px;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+`;
+const AboutDownload = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  .AboutDownload_Button a {
+    padding: 10px 8px;
+    cursor: pointer;
+    font-weight: 300;
+    color: rgb(0, 158, 102);
+    font-family: "Poppins", sans-serif;
+    background: #2f2f2f;
+    border: 0;
+    border-radius: 3px;
+  }
+  .AboutDownload_Icons {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+  }
+  .AboutDownload_Icons a {
+    font-size: 18px;
+    color: rgb(0, 158, 102);
+  }
 `;
