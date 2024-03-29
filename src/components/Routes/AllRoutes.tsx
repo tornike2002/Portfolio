@@ -8,7 +8,7 @@ const AllRoutes: React.FC = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<AboutPage />} />
-      <Route path="/about" element={<MyProjects />} />
+      <Route path="/projects" element={<MyProjects />} />
     </Routes>
   );
 };
