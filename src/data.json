@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Book Shop",
+    "title": "book-shop",
     "img": "./projects/bookShop.png",
     "description": "Book Shop with good features and services, registration, filtering, and more.",
     "tags": ["React", "Typescript", "styled"],
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "title": "Github User Search",
+    "title": "github-user-search",
     "img": "./projects/github.png",
     "description": "Cool app where u can search for users and check their stats on Github",
     "tags": ["React", "Javascript", "Tailwind", "RestAPI"],
@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "title": "Crypto Website",
+    "title": "crypto-website",
     "img": "./projects/crypto.png",
     "description": "Crypto website where u can check prices for any crypto u want",
     "tags": ["React", "RestAPI", "Javascript"],
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "title": "Gym Website",
+    "title": "gym-website",
     "img": "./projects/gym.png",
     "description": "Gym website where u can check lessons, trainers, programs",
     "tags": ["React", "Javascript"],
@@ -37,8 +37,8 @@
   },
   {
     "id": 5,
+    "title": "ecommerce-product-page",
     "img": "./projects/eccomerce.png",
-    "title": "Ecommerce Product Page",
     "description": "Simple Page where u can add in cart and remove items also cool carousel",
     "tags": ["React", "Javascript", "styled"],
     "live": "https://extraordinary-heliotrope-e79751.netlify.app",

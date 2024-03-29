@@ -20,7 +20,7 @@ const MyProjects: React.FC = () => {
       <Navbar />
       <ProjectsMainContainer>
         <div className="filterProjects_wrapper">
-          <div>
+          <div className="inputsDivider">
             <input
               type="checkbox"
               id="react"
@@ -29,7 +29,7 @@ const MyProjects: React.FC = () => {
             />
             <label htmlFor="react">React</label>
           </div>
-          <div>
+          <div className="inputsDivider">
             <input
               type="checkbox"
               id="javascript"
@@ -38,7 +38,7 @@ const MyProjects: React.FC = () => {
             />
             <label htmlFor="javascript">Javascript</label>
           </div>
-          <div>
+          <div className="inputsDivider">
             <input
               type="checkbox"
               id="typescript"
@@ -47,7 +47,7 @@ const MyProjects: React.FC = () => {
             />
             <label htmlFor="typescript">Typescript</label>
           </div>
-          <div>
+          <div className="inputsDivider">
             <input
               type="checkbox"
               id="tailwind"
@@ -56,7 +56,7 @@ const MyProjects: React.FC = () => {
             />
             <label htmlFor="tailwind">Tailwind CSS</label>
           </div>
-          <div>
+          <div className="inputsDivider">
             <input
               type="checkbox"
               id="styled"
@@ -65,7 +65,7 @@ const MyProjects: React.FC = () => {
             />
             <label htmlFor="styled">Styled Components</label>
           </div>
-          <div>
+          <div className="inputsDivider">
             <input
               type="checkbox"
               id="apirest"
@@ -100,21 +100,41 @@ const ProjectsMainContainer = styled.div`
   color: #fff;
   margin: 5% 5%;
   display: flex;
-  .filterProjects_wrapper{
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .filterProjects_wrapper {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    width: 40%;
+    min-width: 25%;
     height: 100vh;
     color: rgb(0, 158, 102);
     font-family: "Poppins", sans-serif;
     font-weight: 500;
+    @media screen and (max-width: 800px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: fit-content;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 15px;
+    }
   }
   .filterProjects_Data {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
+    @media screen and (max-width: 800px) {
+      justify-content: center;
+    }
+  }
+  .inputsDivider {
+    display: flex;
+    gap: 5px;
+    align-items: center;
   }
 `;
