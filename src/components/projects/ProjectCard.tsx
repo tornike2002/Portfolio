@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 export type ProjectProps = {
   id: number;
   img: string;
@@ -18,7 +20,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
   github,
 }) => {
   return (
-    <div>
+    <CardMainWrapper>
       <div key={id}>
         <img src={img} alt="img" />
         <h2>{title}</h2>
@@ -27,8 +29,13 @@ const ProjectCard: React.FC<ProjectProps> = ({
         <a href={live}>Live Preview</a>
         <a href={github}>GitHub</a>
       </div>
-    </div>
+    </CardMainWrapper>
   );
 };
 
 export default ProjectCard;
+const CardMainWrapper = styled.div`
+img{
+  width: 440px;
+}
+`

@@ -20,7 +20,7 @@
   {
     "id": 3,
     "title": "Crypto Website",
-    "img": "./projects/crpyto.png",
+    "img": "./projects/crypto.png",
     "description": "Crypto website where u can check prices for any crypto u want",
     "tags": ["React", "RestAPI", "Javascript"],
     "live": "https://relaxed-cactus-3bc0be.netlify.app",
