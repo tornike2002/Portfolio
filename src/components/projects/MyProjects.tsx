@@ -1,6 +1,9 @@
 import { Fragment } from "react/jsx-runtime";
 import Navbar from "../navbar/Navbar";
 import styled from "styled-components";
+import projectsData from "../../data.json";
+import ProjectCard from "./ProjectCard";
+import { ProjectProps } from "./ProjectCard";
 const MyProjects: React.FC = () => {
   return (
     <Fragment>
@@ -30,6 +33,21 @@ const MyProjects: React.FC = () => {
           <div>
             <input type="checkbox" id="apirest" />
             <label htmlFor="apirest">Rest API</label>
+          </div>
+          {/* data fetched */}
+          <div>
+            {projectsData.map((data: ProjectProps) => (
+              <ProjectCard
+                id={data.id}
+                key={data.id}
+                img={data.img}
+                title={data.title}
+                description={data.description}
+                live={data.live}
+                tags={data.tags}
+                github={data.github}
+              />
+            ))}
           </div>
         </div>
       </ProjectsMainContainer>
