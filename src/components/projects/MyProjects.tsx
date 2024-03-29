@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState } from "react";
 import Navbar from "../navbar/Navbar";
 import styled from "styled-components";
 import projectsData from "../../data.json";
@@ -75,7 +75,7 @@ const MyProjects: React.FC = () => {
             <label htmlFor="apirest">Rest API</label>
           </div>
         </div>
-        <div className="filterProjects_wrapper">
+        <div className="filterProjects_Data">
           {filteredProjects.map((data: ProjectProps) => (
             <ProjectCard
               key={data.id}
@@ -98,10 +98,23 @@ export default MyProjects;
 
 const ProjectsMainContainer = styled.div`
   color: #fff;
-  margin: 0 5%;
-
-  .filterProjects_wrapper {
+  margin: 5% 5%;
+  display: flex;
+  .filterProjects_wrapper{
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 40%;
+    height: 100vh;
+    color: rgb(0, 158, 102);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+  }
+  .filterProjects_Data {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
     flex-wrap: wrap;
   }
 `;
