@@ -6,8 +6,8 @@ const BurgerMenu: React.FC = () => {
     <BurgerManuContainer>
       <div className="burgerWrapper">
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/">About</NavLink>
-        <NavLink to="/">Projects</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/projects">Projects</NavLink>
       </div>
     </BurgerManuContainer>
   );
