@@ -12,7 +12,25 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  scrollbar-width: thin;
+  scrollbar-color: #3f3 #000;
+  cursor: url('assets/mouse/circle.png') 8 8, auto;
 }
-body{
+body {
   background: #101010;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-width: thin;
+  scrollbar-color: #3f3 #000;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3f3;
+  border-radius: 4px;
 }

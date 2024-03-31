@@ -9,7 +9,9 @@ import {
   GithubOutlined,
 } from "@ant-design/icons";
 import CV from "../../assets/cv/cv.pdf";
-const AboutPage: React.FC = () => {
+import AboutSkills from "./AboutSkills";
+import { SmallCardProps } from "./AboutSmallcard";
+const AboutPage: React.FC<SmallCardProps> = () => {
   const [AboutTitle] = useTypewriter({
     words: ["I'm Tornike Butiashvili, React Developer"],
     loop: 1,
@@ -75,7 +77,7 @@ const AboutPage: React.FC = () => {
               </h2>
             </div>
             <div className="AboutMeBox">
-              <h2 style={{ color: "#009e66" }}>
+              <h2 style={{ color: "#3dd23d" }}>
                 <span>Email:</span> {AboutEmail}
               </h2>
               <h2>
@@ -106,6 +108,7 @@ const AboutPage: React.FC = () => {
           </AboutDownload>
         </div>
       </AboutMeWrapper>
+      <AboutSkills />
     </AboutMainContainer>
   );
 };
@@ -137,7 +140,7 @@ const AboutMainContainer = styled.div`
     }
 
     hr {
-      border: 3px solid #009e66;
+      border: 3px solid #3f3;
       width: 75px;
     }
   }
@@ -157,9 +160,9 @@ const AboutMeWrapper = styled.div`
     gap: 40px;
     font-family: "Poppins", sans-serif;
     margin-top: 70px;
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 800px) {
       width: 80%;
-     justify-content: center;
+      justify-content: center;
     }
     h1 {
       font-size: 31px;
@@ -172,6 +175,7 @@ const AboutMeWrapper = styled.div`
       color: #9f9f9f;
       font-weight: 400;
       line-height: 1.95;
+      height: 218px;
     }
     .AboutMeBox {
       display: flex;
@@ -188,9 +192,8 @@ const AboutMeWrapper = styled.div`
         color: #868484;
         font-size: 14px;
       }
-      @media screen and (max-width: 1230px){
+      @media screen and (max-width: 1230px) {
         gap: 3px;
-      
       }
     }
     .AboutBoxContainer {
@@ -221,7 +224,7 @@ const AboutDownload = styled.div`
     padding: 10px 8px;
     cursor: pointer;
     font-weight: 300;
-    color: rgb(0, 158, 102);
+    color: #3f3;
     font-family: "Poppins", sans-serif;
     background: #2f2f2f;
     border: 0;
@@ -235,6 +238,6 @@ const AboutDownload = styled.div`
   }
   .AboutDownload_Icons a {
     font-size: 18px;
-    color: rgb(0, 158, 102);
+    color: #3f3;
   }
 `;
