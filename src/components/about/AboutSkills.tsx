@@ -19,6 +19,15 @@ const AboutSkills: React.FC = () => {
             <li>Git/Github</li>
           </ol>
         </div>
+        {/* work/exp */}
+        <div>
+          <h4>2013 - Present</h4>
+          <h1>Art Director - Facebook Inc</h1>
+          <p>
+            Collaborate with creative and development teams on the execution of
+            ideas.
+          </p>
+        </div>
       </div>
     </SkillsMainContainer>
   );
@@ -52,11 +61,11 @@ const SkillsMainContainer = styled.div`
       transition: all 500ms ease;
       cursor: pointer;
     }
-    li:hover{
-        color: #3f3;
+    li:hover {
+      color: #3f3;
     }
   }
-  .techstack_card h1{
+  .techstack_card h1 {
     color: #eee;
     font-weight: 500;
     font-size: 21px;
