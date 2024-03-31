@@ -10,7 +10,8 @@ import {
 } from "@ant-design/icons";
 import CV from "../../assets/cv/cv.pdf";
 import AboutSkills from "./AboutSkills";
-const AboutPage: React.FC = () => {
+import { SmallCardProps } from "./AboutSmallcard";
+const AboutPage: React.FC<SmallCardProps> = () => {
   const [AboutTitle] = useTypewriter({
     words: ["I'm Tornike Butiashvili, React Developer"],
     loop: 1,
@@ -159,9 +160,9 @@ const AboutMeWrapper = styled.div`
     gap: 40px;
     font-family: "Poppins", sans-serif;
     margin-top: 70px;
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 800px) {
       width: 80%;
-     justify-content: center;
+      justify-content: center;
     }
     h1 {
       font-size: 31px;
@@ -174,6 +175,7 @@ const AboutMeWrapper = styled.div`
       color: #9f9f9f;
       font-weight: 400;
       line-height: 1.95;
+      height: 218px;
     }
     .AboutMeBox {
       display: flex;
@@ -190,9 +192,8 @@ const AboutMeWrapper = styled.div`
         color: #868484;
         font-size: 14px;
       }
-      @media screen and (max-width: 1230px){
+      @media screen and (max-width: 1230px) {
         gap: 3px;
-      
       }
     }
     .AboutBoxContainer {
