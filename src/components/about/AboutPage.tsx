@@ -9,6 +9,7 @@ import {
   GithubOutlined,
 } from "@ant-design/icons";
 import CV from "../../assets/cv/cv.pdf";
+import AboutSkills from "./AboutSkills";
 const AboutPage: React.FC = () => {
   const [AboutTitle] = useTypewriter({
     words: ["I'm Tornike Butiashvili, React Developer"],
@@ -75,7 +76,7 @@ const AboutPage: React.FC = () => {
               </h2>
             </div>
             <div className="AboutMeBox">
-              <h2 style={{ color: "#009e66" }}>
+              <h2 style={{ color: "#3dd23d" }}>
                 <span>Email:</span> {AboutEmail}
               </h2>
               <h2>
@@ -106,6 +107,7 @@ const AboutPage: React.FC = () => {
           </AboutDownload>
         </div>
       </AboutMeWrapper>
+      <AboutSkills />
     </AboutMainContainer>
   );
 };
@@ -137,7 +139,7 @@ const AboutMainContainer = styled.div`
     }
 
     hr {
-      border: 3px solid #009e66;
+      border: 3px solid #3f3;
       width: 75px;
     }
   }
@@ -221,7 +223,7 @@ const AboutDownload = styled.div`
     padding: 10px 8px;
     cursor: pointer;
     font-weight: 300;
-    color: rgb(0, 158, 102);
+    color: #3f3;
     font-family: "Poppins", sans-serif;
     background: #2f2f2f;
     border: 0;
@@ -235,6 +237,6 @@ const AboutDownload = styled.div`
   }
   .AboutDownload_Icons a {
     font-size: 18px;
-    color: rgb(0, 158, 102);
+    color: #3f3;
   }
 `;
