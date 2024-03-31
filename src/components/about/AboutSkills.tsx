@@ -35,7 +35,7 @@ const AboutSkills: React.FC = () => {
             companyAbout="I'm learning Informatics and management systems"
           />
           <AboutSmallcard
-            company="It step academy"
+            company="It Step Academy"
             title="Courses"
             present="2023 "
             companyAbout="
