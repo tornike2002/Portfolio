@@ -18,6 +18,8 @@ const AboutSkills: React.FC = () => {
             <li>HTML</li>
             <li>CSS</li>
             <li>Git/Github</li>
+            <li>OOP</li>
+            <li>Figma/Adobe XD</li>
           </ol>
         </div>
         {/* work/exp */}
