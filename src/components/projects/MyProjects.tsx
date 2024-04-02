@@ -1,9 +1,66 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "../navbar/Navbar";
 import styled from "styled-components";
 import projectsData from "../../data.json";
 import ProjectCard, { ProjectProps } from "./ProjectCard";
+import { motion } from "framer-motion";
 
+// Styled components for checkbox
+const CheckboxWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const StyledCheckbox = styled.input`
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #3f3;
+  border-radius: 3px;
+  margin-right: 5px;
+  cursor: pointer;
+
+  &:checked {
+    background-color: #3f3;
+  }
+
+  &:hover {
+    border-color: #3f3;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(63, 255, 63, 0.5);
+  }
+`;
+
+const CheckboxLabel = styled.label`
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #3f3;
+  cursor: pointer;
+`;
+
+interface CheckboxProps {
+  id: string;
+  label: string;
+  checked: boolean;
+  onChange: () => void;
+}
+
+const Checkbox: React.FC<CheckboxProps> = ({ id, label, checked, onChange }) => (
+  <CheckboxWrapper>
+    <StyledCheckbox
+      type="checkbox"
+      id={id}
+      checked={checked}
+      onChange={onChange}
+    />
+    <CheckboxLabel htmlFor={id}>{label}</CheckboxLabel>
+  </CheckboxWrapper>
+);
+
+// Main component
 const MyProjects: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>("");
 
@@ -16,64 +73,46 @@ const MyProjects: React.FC = () => {
   );
 
   return (
-    <Fragment>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <Navbar />
       <ProjectsMainContainer>
         <div className="filterProjects_wrapper">
-          <div className="inputsDivider">
-            <input
-              type="checkbox"
-              id="react"
-              onChange={() => handleCheckboxChange("React")}
-              checked={selectedFilter === "React"}
-            />
-            <label htmlFor="react">React</label>
-          </div>
-          <div className="inputsDivider">
-            <input
-              type="checkbox"
-              id="javascript"
-              onChange={() => handleCheckboxChange("Javascript")}
-              checked={selectedFilter === "Javascript"}
-            />
-            <label htmlFor="javascript">Javascript</label>
-          </div>
-          <div className="inputsDivider">
-            <input
-              type="checkbox"
-              id="typescript"
-              onChange={() => handleCheckboxChange("Typescript")}
-              checked={selectedFilter === "Typescript"}
-            />
-            <label htmlFor="typescript">Typescript</label>
-          </div>
-          <div className="inputsDivider">
-            <input
-              type="checkbox"
-              id="tailwind"
-              onChange={() => handleCheckboxChange("Tailwind")}
-              checked={selectedFilter === "Tailwind"}
-            />
-            <label htmlFor="tailwind">Tailwind CSS</label>
-          </div>
-          <div className="inputsDivider">
-            <input
-              type="checkbox"
-              id="styled"
-              onChange={() => handleCheckboxChange("styled")}
-              checked={selectedFilter === "styled"}
-            />
-            <label htmlFor="styled">Styled Components</label>
-          </div>
-          <div className="inputsDivider">
-            <input
-              type="checkbox"
-              id="apirest"
-              onChange={() => handleCheckboxChange("RestAPI")}
-              checked={selectedFilter === "RestAPI"}
-            />
-            <label htmlFor="apirest">Rest API</label>
-          </div>
+          <Checkbox
+            id="react"
+            label="React"
+            checked={selectedFilter === "React"}
+            onChange={() => handleCheckboxChange("React")}
+          />
+          <Checkbox
+            id="javascript"
+            label="Javascript"
+            checked={selectedFilter === "Javascript"}
+            onChange={() => handleCheckboxChange("Javascript")}
+          />
+          <Checkbox
+            id="typescript"
+            label="Typescript"
+            checked={selectedFilter === "Typescript"}
+            onChange={() => handleCheckboxChange("Typescript")}
+          />
+          <Checkbox
+            id="tailwind"
+            label="Tailwind CSS"
+            checked={selectedFilter === "Tailwind"}
+            onChange={() => handleCheckboxChange("Tailwind")}
+          />
+          <Checkbox
+            id="styled"
+            label="Styled Components"
+            checked={selectedFilter === "styled"}
+            onChange={() => handleCheckboxChange("styled")}
+          />
+          <Checkbox
+            id="apirest"
+            label="Rest API"
+            checked={selectedFilter === "RestAPI"}
+            onChange={() => handleCheckboxChange("RestAPI")}
+          />
         </div>
         <div className="filterProjects_Data">
           {filteredProjects.map((data: ProjectProps) => (
@@ -90,7 +129,7 @@ const MyProjects: React.FC = () => {
           ))}
         </div>
       </ProjectsMainContainer>
-    </Fragment>
+    </motion.div>
   );
 };
 
@@ -110,7 +149,7 @@ const ProjectsMainContainer = styled.div`
     gap: 5px;
     min-width: 25%;
     height: 100vh;
-    color: rgb(0, 158, 102);
+    color: #3f3;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     @media screen and (max-width: 800px) {

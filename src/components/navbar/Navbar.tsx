@@ -11,9 +11,11 @@ const Navbar: React.FC = () => {
   return (
     <>
       <Nav>
-        <h1>
-          Tornike <span>Butiashvili</span>
-        </h1>
+        <NavLink to="/">
+          <h1>
+            Tornike <span>Butiashvili</span>
+          </h1>
+        </NavLink>
         <NavbarLinks>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About me</NavLink>

@@ -8,10 +8,10 @@ import {
   FacebookOutlined,
   GithubOutlined,
 } from "@ant-design/icons";
+import { motion } from "framer-motion";
 import CV from "../../assets/cv/cv.pdf";
 import AboutSkills from "./AboutSkills";
-import { SmallCardProps } from "./AboutSmallcard";
-const AboutPage: React.FC<SmallCardProps> = () => {
+const AboutPage: React.FC= () => {
   const [AboutTitle] = useTypewriter({
     words: ["I'm Tornike Butiashvili, React Developer"],
     loop: 1,
@@ -52,6 +52,7 @@ const AboutPage: React.FC<SmallCardProps> = () => {
     typeSpeed: 10,
   });
   return (
+    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
     <AboutMainContainer>
       <Navbar />
       <div className="aboutTitle">
@@ -110,6 +111,7 @@ const AboutPage: React.FC<SmallCardProps> = () => {
       </AboutMeWrapper>
       <AboutSkills />
     </AboutMainContainer>
+    </motion.div>
   );
 };
 
