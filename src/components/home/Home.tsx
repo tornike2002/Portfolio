@@ -1,13 +1,13 @@
-import React, { Fragment } from "react";
+
 import styled from "styled-components";
 import Navbar from "../navbar/Navbar";
 import homeBg from "../../assets/Home/homeBg.jpg";
 import MainTitle from "../title/MainTitle";
 import Footer from "../footer/Footer";
-
+import { motion } from "framer-motion";
 const Home: React.FC = () => {
   return (
-    <Fragment>
+    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
       <HomeContainer>
         <Navbar />
         <MainTitle />
@@ -15,7 +15,7 @@ const Home: React.FC = () => {
           <Footer />
         </div>
       </HomeContainer>
-    </Fragment>
+    </motion.div>
   );
 };
 

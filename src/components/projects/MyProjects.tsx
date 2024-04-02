@@ -1,8 +1,9 @@
-import React, { Fragment, useState } from "react";
+import React, {useState } from "react";
 import Navbar from "../navbar/Navbar";
 import styled from "styled-components";
 import projectsData from "../../data.json";
 import ProjectCard, { ProjectProps } from "./ProjectCard";
+import { motion } from "framer-motion";
 
 const MyProjects: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>("");
@@ -16,7 +17,7 @@ const MyProjects: React.FC = () => {
   );
 
   return (
-    <Fragment>
+    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
       <Navbar />
       <ProjectsMainContainer>
         <div className="filterProjects_wrapper">
@@ -90,7 +91,7 @@ const MyProjects: React.FC = () => {
           ))}
         </div>
       </ProjectsMainContainer>
-    </Fragment>
+    </motion.div>
   );
 };
 

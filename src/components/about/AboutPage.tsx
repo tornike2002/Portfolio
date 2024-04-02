@@ -8,6 +8,7 @@ import {
   FacebookOutlined,
   GithubOutlined,
 } from "@ant-design/icons";
+import { motion } from "framer-motion";
 import CV from "../../assets/cv/cv.pdf";
 import AboutSkills from "./AboutSkills";
 const AboutPage: React.FC= () => {
@@ -51,6 +52,7 @@ const AboutPage: React.FC= () => {
     typeSpeed: 10,
   });
   return (
+    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
     <AboutMainContainer>
       <Navbar />
       <div className="aboutTitle">
@@ -109,6 +111,7 @@ const AboutPage: React.FC= () => {
       </AboutMeWrapper>
       <AboutSkills />
     </AboutMainContainer>
+    </motion.div>
   );
 };
 
