@@ -10,8 +10,7 @@ import {
 } from "@ant-design/icons";
 import CV from "../../assets/cv/cv.pdf";
 import AboutSkills from "./AboutSkills";
-import { SmallCardProps } from "./AboutSmallcard";
-const AboutPage: React.FC<SmallCardProps> = () => {
+const AboutPage: React.FC= () => {
   const [AboutTitle] = useTypewriter({
     words: ["I'm Tornike Butiashvili, React Developer"],
     loop: 1,
