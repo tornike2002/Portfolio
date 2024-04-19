@@ -35,7 +35,7 @@ const SmallCardContainer = styled.div`
   font-family: "Poppins", sans-serif;
   width: 100%;
   transition: all 500ms ease;
-  
+  margin-bottom: 30px;
   &:hover {
     border: 1px solid #3f3;
   }
