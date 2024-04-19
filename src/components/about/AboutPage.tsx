@@ -162,10 +162,26 @@ const AboutMeWrapper = styled.div`
     gap: 40px;
     font-family: "Poppins", sans-serif;
     margin-top: 70px;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1073px) {
       width: 80%;
       justify-content: center;
     }
+    @media screen and (max-width: 537px) {
+      hr{
+        margin-top: 6rem;
+      }
+    }
+    @media screen and (max-width: 390px) {
+      hr{
+        margin-top: 10rem;
+      }
+    }
+    @media screen and (max-width: 327px) {
+      hr{
+        margin-top: 15rem;
+      }
+    }
+
     h1 {
       font-size: 31px;
       font-weight: 700;
@@ -214,7 +230,7 @@ const AboutMeWrapper = styled.div`
 const LottieContainer = styled.div`
   width: 383px;
   height: 440px;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1073px) {
     display: none;
   }
 `;
@@ -237,9 +253,16 @@ const AboutDownload = styled.div`
     gap: 5px;
     align-items: center;
     cursor: pointer;
+    a{
+      transition: all 500ms ease;
+    }
+    a:hover {
+      transform: scale(1.1)
+
+    }
   }
   .AboutDownload_Icons a {
-    font-size: 18px;
+    font-size: 25px;
     color: #3f3;
   }
 `;

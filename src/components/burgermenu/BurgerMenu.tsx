@@ -1,15 +1,40 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { AnimatePresence, motion } from "framer-motion";
 
 const BurgerMenu: React.FC = () => {
+  const menuVariants = {
+    initial: {
+      scaleY: 0,
+    },
+    animate: {
+      scaleY: 1,
+      tranistion: 0.5,
+      ease: [0.12, 0, 0.39, 0],
+    },
+    exit: {
+      scaleY: 0,
+      tranistion: 0.5,
+      ease: [0.12, 0, 0.39, 0],
+    },
+  };
   return (
-    <BurgerManuContainer>
-      <div className="burgerWrapper">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/projects">Projects</NavLink>
-      </div>
-    </BurgerManuContainer>
+    <AnimatePresence>
+      <motion.div
+        variants={menuVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
+        <BurgerManuContainer>
+          <div className="burgerWrapper">
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/projects">Projects</NavLink>
+          </div>
+        </BurgerManuContainer>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 
