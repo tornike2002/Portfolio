@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { BarsOutlined, CloseOutlined } from "@ant-design/icons";
 import BurgerMenu from "../burgermenu/BurgerMenu";
 import { useState } from "react";
+
 const Navbar: React.FC = () => {
   const [burgerOpen, setBurgerOpen] = useState<boolean>(false);
   const burgerMenuHandler = () => {
@@ -85,6 +86,8 @@ const NavbarLinks = styled.div`
   }
   a:hover {
     color: #fff;
+    transform: scale(1.1);
+    text-shadow: 0px 0px 9px rgb(202, 30, 30);
   }
   @media screen and (max-width: 975px) {
     display: none;

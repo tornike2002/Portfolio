@@ -253,9 +253,16 @@ const AboutDownload = styled.div`
     gap: 5px;
     align-items: center;
     cursor: pointer;
+    a{
+      transition: all 500ms ease;
+    }
+    a:hover {
+      transform: scale(1.1)
+
+    }
   }
   .AboutDownload_Icons a {
-    font-size: 18px;
+    font-size: 25px;
     color: #3f3;
   }
 `;

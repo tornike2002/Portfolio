@@ -53,17 +53,17 @@ const FooterContainer = styled.footer`
     align-items: center;
     justify-content: space-between;
     width: 50%;
-    @media screen and (max-width: 1320px){
+    @media screen and (max-width: 1320px) {
       width: 60%;
     }
-    @media screen and (max-width: 1100px){
+    @media screen and (max-width: 1100px) {
       width: 70%;
     }
-    @media screen and (max-width: 975px){
+    @media screen and (max-width: 975px) {
       width: 80%;
     }
-    @media screen and (max-width: 820px){
-      .footerInfo-dissepiar{
+    @media screen and (max-width: 820px) {
+      .footerInfo-dissepiar {
         display: none;
       }
     }
@@ -75,8 +75,8 @@ const FooterContainer = styled.footer`
     span {
       color: #4bffa5;
     }
-    @media screen and (max-width: 340px){
-      font-size:16px;
+    @media screen and (max-width: 340px) {
+      font-size: 16px;
     }
   }
 `;
@@ -88,5 +88,12 @@ const IconsWrapper = styled.div`
     align-items: center;
     gap: 25px;
     font-size: 25px;
+    a {
+      transition: all 500ms ease;
+    }
+    a:hover {
+      transform: scale(1.1);
+      color:#fff;
+    }
   }
 `;
